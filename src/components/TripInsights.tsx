@@ -114,12 +114,14 @@ export function TripInsights() {
             </div>
             
             {/* Center - The Shard with box */}
-            <div className="flex flex-col items-center w-1/2">
-              <div className="border-2 border-gray-400 rounded-lg p-4 bg-gray-50">
-                <div className="w-16 h-12 bg-gray-200 border border-gray-300 rounded mb-2 flex items-center justify-center">
+            <div className="flex flex-col items-center flex-1 mx-4">
+              <div className="border-2 border-gray-400 rounded-lg p-4 bg-gray-50 w-full max-w-32">
+                <div className="w-full h-12 bg-gray-200 border border-gray-300 rounded mb-2 flex items-center justify-center">
                   <span className="text-xs text-gray-500">IMG</span>
                 </div>
-                <span className="text-lg font-bold text-black">The Shard</span>
+                <div className="text-center">
+                  <span className="text-lg font-bold text-black">The Shard</span>
+                </div>
               </div>
             </div>
             
