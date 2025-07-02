@@ -167,10 +167,6 @@ export function TripInsights() {
             <div className="flex items-center justify-center h-20">
               <span className="text-4xl font-bold text-black">1,078</span>
             </div>
-            
-            <div className="flex items-center justify-center mt-8">
-              <span className="text-sm text-gray-600">customers walked past</span>
-            </div>
           </div>
 
           {/* Chart 6 - unchanged placeholder */}
