@@ -1,5 +1,14 @@
 import { Info } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+
+const ratingsData = [
+  { rating: '1', count: 5 },
+  { rating: '2', count: 12 },
+  { rating: '3', count: 28 },
+  { rating: '4', count: 165 },
+  { rating: '5', count: 190 },
+];
 
 export function AttractionInsights() {
   return (
@@ -88,8 +97,44 @@ export function AttractionInsights() {
           </div>
         </div>
 
-        {/* Charts 4-6 remain unchanged */}
-        {[4, 5, 6].map((i) => (
+        {/* Chart 4 - Ratings for The Shard from Go City customers */}
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-4 h-4 border border-black rounded-full"></div>
+            <span className="text-xs font-mono text-gray-400">CHART 4</span>
+          </div>
+          
+          <div className="flex items-center gap-2 mb-4">
+            <h3 className="text-sm font-medium text-black">Ratings for The Shard from Go City customers</h3>
+          </div>
+          
+          <div className="h-32">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart
+                data={ratingsData}
+                layout="horizontal"
+                margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
+              >
+                <XAxis type="number" hide />
+                <YAxis 
+                  type="category" 
+                  dataKey="rating" 
+                  axisLine={false}
+                  tickLine={false}
+                  tick={{ fontSize: 12, fill: '#666' }}
+                />
+                <Bar 
+                  dataKey="count" 
+                  fill="#000000"
+                  radius={[0, 2, 2, 0]}
+                />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        {/* Charts 5-6 remain unchanged */}
+        {[5, 6].map((i) => (
           <div key={i} className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
             <div className="flex items-center justify-between mb-4">
               <div className="w-4 h-4 border border-black rounded-full"></div>
