@@ -1,6 +1,6 @@
 import { Info } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
-import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 
 const ratingsData = [
   { rating: '1', count: 5 },
@@ -8,6 +8,14 @@ const ratingsData = [
   { rating: '3', count: 28 },
   { rating: '4', count: 165 },
   { rating: '5', count: 190 },
+];
+
+const reservationData = [
+  { name: 'On the day', value: 25, color: '#000000' },
+  { name: '2-3 days before', value: 35, color: '#333333' },
+  { name: '4-7 days before', value: 20, color: '#666666' },
+  { name: '7-14 days before', value: 15, color: '#999999' },
+  { name: 'More than 14 days before', value: 5, color: '#cccccc' },
 ];
 
 export function AttractionInsights() {
@@ -169,6 +177,38 @@ export function AttractionInsights() {
           
           <div className="flex flex-col items-center justify-center h-32">
             <div className="text-6xl font-bold text-black">86%</div>
+          </div>
+        </div>
+
+        {/* Chart 7 - When are Go City customers making their reservations for The Shard? */}
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-4 h-4 border border-black rounded-full"></div>
+            <span className="text-xs font-mono text-gray-400">CHART 7</span>
+          </div>
+          
+          <div className="flex items-center gap-2 mb-4">
+            <h3 className="text-sm font-medium text-black">When are Go City customers making their reservations for The Shard?</h3>
+          </div>
+          
+          <div className="h-32">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={reservationData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={20}
+                  outerRadius={50}
+                  paddingAngle={2}
+                  dataKey="value"
+                >
+                  {reservationData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
           </div>
         </div>
       </div>
