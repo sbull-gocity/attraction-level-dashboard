@@ -156,28 +156,19 @@ export function AttractionInsights() {
           </div>
         </div>
 
-        {/* Chart 6 remains unchanged */}
+        {/* Chart 6 - Go City visitors to The Shard with an advance reservation */}
         <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
           <div className="flex items-center justify-between mb-4">
             <div className="w-4 h-4 border border-black rounded-full"></div>
             <span className="text-xs font-mono text-gray-400">CHART 6</span>
           </div>
           
-          <div className="space-y-2">
-            <div className="h-2 bg-gray-200 rounded w-5/6"></div>
-            <div className="h-2 bg-gray-200 rounded w-2/3"></div>
+          <div className="flex items-center gap-2 mb-4">
+            <h3 className="text-sm font-medium text-black">Go City visitors to The Shard with an advance reservation</h3>
           </div>
           
-          <div className="mt-8 space-y-3">
-            <div className="flex justify-between">
-              <div className="w-8 h-8 border border-gray-300 rounded"></div>
-              <div className="w-8 h-8 border border-gray-300 rounded"></div>
-              <div className="w-8 h-8 border border-gray-300 rounded"></div>
-            </div>
-            
-            <div className="h-20 border border-gray-300 rounded flex items-center justify-center">
-              <span className="text-xs text-gray-400 font-mono">VISUALIZATION</span>
-            </div>
+          <div className="flex flex-col items-center justify-center h-32">
+            <div className="text-6xl font-bold text-black">86%</div>
           </div>
         </div>
       </div>
