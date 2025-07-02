@@ -1,3 +1,4 @@
+
 import { Info } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
@@ -16,6 +17,23 @@ const reservationData = [
   { name: '4-7 days before', value: 20, color: '#666666' },
   { name: '7-14 days before', value: 15, color: '#999999' },
   { name: 'More than 14 days before', value: 5, color: '#cccccc' },
+];
+
+const visitTimeData = [
+  { time: 'Mon AM', count: 45 },
+  { time: 'Mon PM', count: 68 },
+  { time: 'Tue AM', count: 52 },
+  { time: 'Tue PM', count: 71 },
+  { time: 'Wed AM', count: 58 },
+  { time: 'Wed PM', count: 79 },
+  { time: 'Thu AM', count: 61 },
+  { time: 'Thu PM', count: 84 },
+  { time: 'Fri AM', count: 73 },
+  { time: 'Fri PM', count: 95 },
+  { time: 'Sat AM', count: 89 },
+  { time: 'Sat PM', count: 112 },
+  { time: 'Sun AM', count: 76 },
+  { time: 'Sun PM', count: 98 },
 ];
 
 export function AttractionInsights() {
@@ -156,11 +174,6 @@ export function AttractionInsights() {
               with many describing the experience as "unforgettable" and highlighting the spectacular 
               sunset and night-time city views from the observation deck.
             </p>
-            <p>
-              Many customers appreciate the smooth booking process and fast elevator system, though 
-              some mention that the experience can feel rushed during peak times and would prefer 
-              more time to fully enjoy the views without feeling pressured to move along.
-            </p>
           </div>
         </div>
 
@@ -208,6 +221,43 @@ export function AttractionInsights() {
                   ))}
                 </Pie>
               </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+
+        {/* Chart 8 - When are Go City customers visiting The Shard? */}
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-4 h-4 border border-black rounded-full"></div>
+            <span className="text-xs font-mono text-gray-400">CHART 8</span>
+          </div>
+          
+          <div className="flex items-center gap-2 mb-4">
+            <h3 className="text-sm font-medium text-black">When are Go City customers visiting The Shard?</h3>
+          </div>
+          
+          <div className="h-32">
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart
+                data={visitTimeData}
+                margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
+              >
+                <XAxis 
+                  dataKey="time" 
+                  axisLine={false}
+                  tickLine={false}
+                  tick={{ fontSize: 10, fill: '#666' }}
+                  angle={-45}
+                  textAnchor="end"
+                  height={60}
+                />
+                <YAxis type="number" hide />
+                <Bar 
+                  dataKey="count" 
+                  fill="#000000"
+                  radius={[2, 2, 0, 0]}
+                />
+              </BarChart>
             </ResponsiveContainer>
           </div>
         </div>
