@@ -166,7 +166,7 @@ export function CustomerInsights() {
                   tickLine={false}
                   width={75}
                 />
-                <Bar dataKey="value" fill="#808080" stroke="#000000" strokeWidth={1} />
+                <Bar dataKey="value" fill="#404040" stroke="#000000" strokeWidth={1} />
                 <ChartTooltip content={<ChartTooltipContent />} />
               </BarChart>
             </ChartContainer>
