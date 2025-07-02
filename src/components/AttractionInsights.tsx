@@ -37,8 +37,35 @@ export function AttractionInsights() {
           </div>
         </div>
 
-        {/* Charts 2-6 remain unchanged */}
-        {[2, 3, 4, 5, 6].map((i) => (
+        {/* Chart 2 - The Shard Ranks in Observation Deck Category */}
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-4 h-4 border border-black rounded-full"></div>
+            <span className="text-xs font-mono text-gray-400">CHART 2</span>
+          </div>
+          
+          <div className="flex items-center gap-2 mb-4">
+            <h3 className="text-sm font-medium text-black">The Shard ranks</h3>
+            <HoverCard>
+              <HoverCardTrigger asChild>
+                <Info className="w-4 h-4 text-gray-400 cursor-help" />
+              </HoverCardTrigger>
+              <HoverCardContent className="w-64">
+                <p className="text-sm">Ranking based on quantity of scans over last 30 days</p>
+              </HoverCardContent>
+            </HoverCard>
+          </div>
+          
+          <div className="flex flex-col items-center justify-center h-32">
+            <div className="text-6xl font-bold text-black mb-2">1st</div>
+            <div className="text-sm text-gray-600 text-center">
+              out of all attractions in the Observation Deck category
+            </div>
+          </div>
+        </div>
+
+        {/* Charts 3-6 remain unchanged */}
+        {[3, 4, 5, 6].map((i) => (
           <div key={i} className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
             <div className="flex items-center justify-between mb-4">
               <div className="w-4 h-4 border border-black rounded-full"></div>
