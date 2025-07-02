@@ -153,11 +153,6 @@ export function AttractionInsights() {
               some mention that the experience can feel rushed during peak times and would prefer 
               more time to fully enjoy the views without feeling pressured to move along.
             </p>
-            <p>
-              While the majority find the experience worthwhile, some visitors note that the ticket 
-              price is on the higher side, but most agree that the unique perspective of London's 
-              skyline and landmarks makes it a must-visit attraction for both tourists and locals.
-            </p>
           </div>
         </div>
 
