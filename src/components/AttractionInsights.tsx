@@ -1,3 +1,4 @@
+
 import { Info } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
@@ -177,7 +178,7 @@ export function AttractionInsights() {
         </div>
 
         {/* Chart 6 - Go City visitors to The Shard with an advance reservation */}
-        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-80">
           <div className="flex items-center justify-between mb-4">
             <div className="w-4 h-4 border border-black rounded-full"></div>
             <span className="text-xs font-mono text-gray-400">CHART 6</span>
@@ -187,13 +188,13 @@ export function AttractionInsights() {
             <h3 className="text-sm font-medium text-black">Go City visitors to The Shard with an advance reservation</h3>
           </div>
           
-          <div className="flex flex-col items-center justify-center h-32">
+          <div className="flex flex-col items-center justify-center h-48">
             <div className="text-6xl font-bold text-black">86%</div>
           </div>
         </div>
 
         {/* Chart 7 - When are Go City customers making their reservations for The Shard? */}
-        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-80">
           <div className="flex items-center justify-between mb-4">
             <div className="w-4 h-4 border border-black rounded-full"></div>
             <span className="text-xs font-mono text-gray-400">CHART 7</span>
@@ -237,7 +238,7 @@ export function AttractionInsights() {
         </div>
 
         {/* Chart 8 - When are Go City customers visiting The Shard? */}
-        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-80">
           <div className="flex items-center justify-between mb-4">
             <div className="w-4 h-4 border border-black rounded-full"></div>
             <span className="text-xs font-mono text-gray-400">CHART 8</span>
@@ -247,7 +248,7 @@ export function AttractionInsights() {
             <h3 className="text-sm font-medium text-black">When are Go City customers visiting The Shard?</h3>
           </div>
           
-          <div className="h-32">
+          <div className="h-48">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={visitTimeData}
