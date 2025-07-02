@@ -1,4 +1,29 @@
 
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { PieChart, Pie, Cell } from "recharts";
+
+const sourceMarkets = [
+  { rank: 1, country: "USA" },
+  { rank: 2, country: "UK" },
+  { rank: 3, country: "Germany" },
+  { rank: 4, country: "France" },
+  { rank: 5, country: "Spain" }
+];
+
+const partySizeData = [
+  { name: "Solos", value: 25, fill: "#000000" },
+  { name: "Couples", value: 45, fill: "#404040" },
+  { name: "Families", value: 20, fill: "#808080" },
+  { name: "Groups", value: 10, fill: "#c0c0c0" }
+];
+
+const chartConfig = {
+  solos: { label: "Solos" },
+  couples: { label: "Couples" },  
+  families: { label: "Families" },
+  groups: { label: "Groups" }
+};
+
 export function CustomerInsights() {
   return (
     <div className="space-y-6">
@@ -8,7 +33,70 @@ export function CustomerInsights() {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
+        {/* Top 5 Source Markets */}
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-4 h-4 border border-black rounded-full"></div>
+            <span className="text-xs font-mono text-gray-400">CHART 1</span>
+          </div>
+          
+          <h3 className="text-sm font-bold text-black mb-4">Top 5 Source Markets</h3>
+          
+          <div className="space-y-3">
+            {sourceMarkets.map((market) => (
+              <div key={market.rank} className="flex items-center gap-3 py-2 border-b border-gray-200 last:border-b-0">
+                <div className="w-6 h-6 border border-black rounded-full flex items-center justify-center text-xs font-mono">
+                  {market.rank}
+                </div>
+                <span className="text-sm font-medium text-black">{market.country}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Party Size Pie Chart */}
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-4 h-4 border border-black rounded-full"></div>
+            <span className="text-xs font-mono text-gray-400">CHART 2</span>
+          </div>
+          
+          <h3 className="text-sm font-bold text-black mb-2">Party Size</h3>
+          
+          <ChartContainer config={chartConfig} className="h-32">
+            <PieChart>
+              <Pie
+                data={partySizeData}
+                cx="50%"
+                cy="50%"
+                outerRadius={50}
+                dataKey="value"
+                stroke="#000000"
+                strokeWidth={1}
+              >
+                {partySizeData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={entry.fill} />
+                ))}
+              </Pie>
+              <ChartTooltip content={<ChartTooltipContent />} />
+            </PieChart>
+          </ChartContainer>
+          
+          <div className="flex flex-wrap gap-2 mt-2">
+            {partySizeData.map((item) => (
+              <div key={item.name} className="flex items-center gap-1">
+                <div 
+                  className="w-2 h-2 border border-black" 
+                  style={{ backgroundColor: item.fill }}
+                ></div>
+                <span className="text-xs text-gray-600">{item.name}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Remaining placeholder charts */}
+        {[3, 4, 5, 6].map((i) => (
           <div key={i} className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
             <div className="flex items-center justify-between mb-4">
               <div className="w-4 h-4 border border-black rounded-full"></div>
