@@ -1,5 +1,6 @@
+
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
-import { PieChart, Pie, Cell } from "recharts";
+import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis } from "recharts";
 import { Info, ArrowUp } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -16,6 +17,13 @@ const partySizeData = [
   { name: "Couples", value: 45, fill: "#404040" },
   { name: "Families", value: 20, fill: "#808080" },
   { name: "Groups", value: 10, fill: "#c0c0c0" }
+];
+
+const purchaseToUsageData = [
+  { timeframe: "Less than 1 day", value: 35 },
+  { timeframe: "1-7 days", value: 28 },
+  { timeframe: "7-30 days", value: 22 },
+  { timeframe: "30+ days", value: 15 }
 ];
 
 const chartConfig = {
@@ -128,8 +136,44 @@ export function CustomerInsights() {
             </div>
           </div>
 
+          {/* Pass Purchase to Usage Chart */}
+          <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+            <div className="flex items-center justify-between mb-4">
+              <div className="w-4 h-4 border border-black rounded-full"></div>
+              <span className="text-xs font-mono text-gray-400">CHART 4</span>
+            </div>
+            
+            <div className="flex items-center gap-2 mb-4">
+              <h3 className="text-sm font-bold text-black">Pass Purchase to Usage for Customers Visiting The Shard</h3>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Info className="w-4 h-4 text-gray-400 cursor-help" />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p className="text-xs">This tells you how much time has lapsed between a customer buying a pass and using it at The Shard</p>
+                </TooltipContent>
+              </Tooltip>
+            </div>
+            
+            <ChartContainer config={chartConfig} className="h-32">
+              <BarChart data={purchaseToUsageData} layout="horizontal" margin={{ left: 80, right: 20 }}>
+                <XAxis type="number" hide />
+                <YAxis 
+                  type="category" 
+                  dataKey="timeframe" 
+                  tick={{ fontSize: 10, fill: "#666" }}
+                  axisLine={false}
+                  tickLine={false}
+                  width={75}
+                />
+                <Bar dataKey="value" fill="#808080" stroke="#000000" strokeWidth={1} />
+                <ChartTooltip content={<ChartTooltipContent />} />
+              </BarChart>
+            </ChartContainer>
+          </div>
+
           {/* Remaining placeholder charts */}
-          {[4, 5, 6].map((i) => (
+          {[5, 6].map((i) => (
             <div key={i} className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
               <div className="flex items-center justify-between mb-4">
                 <div className="w-4 h-4 border border-black rounded-full"></div>
