@@ -112,21 +112,19 @@ export function AttractionInsights() {
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={ratingsData}
-                layout="horizontal"
                 margin={{ top: 5, right: 30, left: 10, bottom: 5 }}
               >
-                <XAxis type="number" hide />
-                <YAxis 
-                  type="category" 
+                <XAxis 
                   dataKey="rating" 
                   axisLine={false}
                   tickLine={false}
                   tick={{ fontSize: 12, fill: '#666' }}
                 />
+                <YAxis type="number" hide />
                 <Bar 
                   dataKey="count" 
                   fill="#000000"
-                  radius={[0, 2, 2, 0]}
+                  radius={[2, 2, 0, 0]}
                 />
               </BarChart>
             </ResponsiveContainer>
