@@ -131,32 +131,60 @@ export function AttractionInsights() {
           </div>
         </div>
 
-        {/* Charts 5-6 remain unchanged */}
-        {[5, 6].map((i) => (
-          <div key={i} className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
-            <div className="flex items-center justify-between mb-4">
-              <div className="w-4 h-4 border border-black rounded-full"></div>
-              <span className="text-xs font-mono text-gray-400">CHART {i}</span>
+        {/* Chart 5 - AI summary of reviews spanning 2 columns */}
+        <div className="lg:col-span-2 bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-4 h-4 border border-black rounded-full"></div>
+            <span className="text-xs font-mono text-gray-400">CHART 5</span>
+          </div>
+          
+          <div className="flex items-center gap-2 mb-4">
+            <h3 className="text-sm font-medium text-black">AI summary of reviews from Go City customers</h3>
+          </div>
+          
+          <div className="space-y-4 text-sm text-gray-700 leading-relaxed">
+            <p>
+              Visitors consistently praise The Shard for its breathtaking panoramic views of London, 
+              with many describing the experience as "unforgettable" and highlighting the spectacular 
+              sunset and night-time city views from the observation deck.
+            </p>
+            <p>
+              Many customers appreciate the smooth booking process and fast elevator system, though 
+              some mention that the experience can feel rushed during peak times and would prefer 
+              more time to fully enjoy the views without feeling pressured to move along.
+            </p>
+            <p>
+              While the majority find the experience worthwhile, some visitors note that the ticket 
+              price is on the higher side, but most agree that the unique perspective of London's 
+              skyline and landmarks makes it a must-visit attraction for both tourists and locals.
+            </p>
+          </div>
+        </div>
+
+        {/* Chart 6 remains unchanged */}
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="flex items-center justify-between mb-4">
+            <div className="w-4 h-4 border border-black rounded-full"></div>
+            <span className="text-xs font-mono text-gray-400">CHART 6</span>
+          </div>
+          
+          <div className="space-y-2">
+            <div className="h-2 bg-gray-200 rounded w-5/6"></div>
+            <div className="h-2 bg-gray-200 rounded w-2/3"></div>
+          </div>
+          
+          <div className="mt-8 space-y-3">
+            <div className="flex justify-between">
+              <div className="w-8 h-8 border border-gray-300 rounded"></div>
+              <div className="w-8 h-8 border border-gray-300 rounded"></div>
+              <div className="w-8 h-8 border border-gray-300 rounded"></div>
             </div>
             
-            <div className="space-y-2">
-              <div className="h-2 bg-gray-200 rounded w-5/6"></div>
-              <div className="h-2 bg-gray-200 rounded w-2/3"></div>
-            </div>
-            
-            <div className="mt-8 space-y-3">
-              <div className="flex justify-between">
-                <div className="w-8 h-8 border border-gray-300 rounded"></div>
-                <div className="w-8 h-8 border border-gray-300 rounded"></div>
-                <div className="w-8 h-8 border border-gray-300 rounded"></div>
-              </div>
-              
-              <div className="h-20 border border-gray-300 rounded flex items-center justify-center">
-                <span className="text-xs text-gray-400 font-mono">VISUALIZATION</span>
-              </div>
+            <div className="h-20 border border-gray-300 rounded flex items-center justify-center">
+              <span className="text-xs text-gray-400 font-mono">VISUALIZATION</span>
             </div>
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );
