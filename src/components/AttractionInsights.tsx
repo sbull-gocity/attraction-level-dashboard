@@ -1,4 +1,5 @@
 
+
 import { Info } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
@@ -124,7 +125,7 @@ export function AttractionInsights() {
         </div>
 
         {/* Chart 4 - Ratings for The Shard from Go City customers */}
-        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+        <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-80">
           <div className="flex items-center justify-between mb-4">
             <div className="w-4 h-4 border border-black rounded-full"></div>
             <span className="text-xs font-mono text-gray-400">CHART 4</span>
@@ -134,7 +135,7 @@ export function AttractionInsights() {
             <h3 className="text-sm font-medium text-black">Ratings for The Shard from Go City customers</h3>
           </div>
           
-          <div className="h-32">
+          <div className="h-48">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart
                 data={ratingsData}
@@ -158,7 +159,7 @@ export function AttractionInsights() {
         </div>
 
         {/* Chart 5 - AI summary of reviews spanning 2 columns */}
-        <div className="lg:col-span-2 bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+        <div className="lg:col-span-2 bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-80">
           <div className="flex items-center justify-between mb-4">
             <div className="w-4 h-4 border border-black rounded-full"></div>
             <span className="text-xs font-mono text-gray-400">CHART 5</span>
@@ -173,6 +174,10 @@ export function AttractionInsights() {
               Visitors consistently praise The Shard for its breathtaking panoramic views of London, 
               with many describing the experience as "unforgettable" and highlighting the spectacular 
               sunset and night-time city views from the observation deck.
+            </p>
+            <p>
+              The majority of reviews emphasize the impressive height and unique vantage point, 
+              though some visitors note that clear weather conditions significantly enhance the experience.
             </p>
           </div>
         </div>
@@ -277,3 +282,4 @@ export function AttractionInsights() {
     </div>
   );
 }
+
