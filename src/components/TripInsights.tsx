@@ -1,3 +1,4 @@
+
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { BarChart, Bar, XAxis, YAxis } from "recharts";
@@ -146,7 +147,7 @@ export function TripInsights() {
           </div>
 
           {/* Chart 5 - How many Go City customers walk past The Shard? */}
-          <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-80">
             <div className="flex items-center justify-between mb-4">
               <div className="w-4 h-4 border border-black rounded-full"></div>
               <span className="text-xs font-mono text-gray-400">CHART 5</span>
@@ -170,7 +171,7 @@ export function TripInsights() {
           </div>
 
           {/* Chart 6 - Nearest Go City attractions */}
-          <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-80">
             <div className="flex items-center justify-between mb-4">
               <div className="w-4 h-4 border border-black rounded-full"></div>
               <span className="text-xs font-mono text-gray-400">CHART 6</span>
@@ -203,7 +204,7 @@ export function TripInsights() {
           </div>
 
           {/* Chart 7 - Most popular categories for customers who visit The Shard */}
-          <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
+          <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-80">
             <div className="flex items-center justify-between mb-4">
               <div className="w-4 h-4 border border-black rounded-full"></div>
               <span className="text-xs font-mono text-gray-400">CHART 7</span>
