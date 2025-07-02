@@ -156,16 +156,18 @@ export function CustomerInsights() {
             </div>
             
             <ChartContainer config={chartConfig} className="h-32">
-              <BarChart data={purchaseToUsageData} layout="horizontal" margin={{ left: 80, right: 20 }}>
-                <XAxis type="number" hide />
-                <YAxis 
+              <BarChart data={purchaseToUsageData} margin={{ top: 20, right: 20, bottom: 40, left: 20 }}>
+                <XAxis 
                   type="category" 
                   dataKey="timeframe" 
-                  tick={{ fontSize: 10, fill: "#666" }}
+                  tick={{ fontSize: 8, fill: "#666" }}
                   axisLine={false}
                   tickLine={false}
-                  width={75}
+                  angle={-45}
+                  textAnchor="end"
+                  height={40}
                 />
+                <YAxis type="number" hide />
                 <Bar dataKey="value" fill="#404040" stroke="#000000" strokeWidth={1} />
                 <ChartTooltip content={<ChartTooltipContent />} />
               </BarChart>
