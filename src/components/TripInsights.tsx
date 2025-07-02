@@ -101,38 +101,40 @@ export function TripInsights() {
             <div className="flex flex-col space-y-3 w-1/4">
               <div className="flex items-center">
                 <span className="text-xs text-gray-700">Tower of London</span>
-                <div className="ml-2 w-8 h-px bg-gray-400"></div>
+                <div className="ml-2 w-16 h-px bg-gray-400"></div>
               </div>
               <div className="flex items-center">
                 <span className="text-xs text-gray-700">Hop-on Hop-off Bus</span>
-                <div className="ml-2 w-8 h-px bg-gray-400"></div>
+                <div className="ml-2 w-16 h-px bg-gray-400"></div>
               </div>
               <div className="flex items-center">
                 <span className="text-xs text-gray-700">Tower Bridge</span>
-                <div className="ml-2 w-8 h-px bg-gray-400"></div>
+                <div className="ml-2 w-16 h-px bg-gray-400"></div>
               </div>
             </div>
             
-            {/* Center - The Shard */}
+            {/* Center - The Shard with box */}
             <div className="flex flex-col items-center w-1/2">
-              <div className="w-16 h-12 bg-gray-200 border border-gray-300 rounded mb-2 flex items-center justify-center">
-                <span className="text-xs text-gray-500">IMG</span>
+              <div className="border-2 border-gray-400 rounded-lg p-4 bg-gray-50">
+                <div className="w-16 h-12 bg-gray-200 border border-gray-300 rounded mb-2 flex items-center justify-center">
+                  <span className="text-xs text-gray-500">IMG</span>
+                </div>
+                <span className="text-lg font-bold text-black">The Shard</span>
               </div>
-              <span className="text-lg font-bold text-black">The Shard</span>
             </div>
             
             {/* Right side attractions */}
             <div className="flex flex-col space-y-3 w-1/4">
               <div className="flex items-center justify-end">
-                <div className="mr-2 w-8 h-px bg-gray-400"></div>
+                <div className="mr-2 w-16 h-px bg-gray-400"></div>
                 <span className="text-xs text-gray-700">London Zoo</span>
               </div>
               <div className="flex items-center justify-end">
-                <div className="mr-2 w-8 h-px bg-gray-400"></div>
+                <div className="mr-2 w-16 h-px bg-gray-400"></div>
                 <span className="text-xs text-gray-700">St Paul's Cathedral</span>
               </div>
               <div className="flex items-center justify-end">
-                <div className="mr-2 w-8 h-px bg-gray-400"></div>
+                <div className="mr-2 w-16 h-px bg-gray-400"></div>
                 <span className="text-xs text-gray-700">Cutty Sark</span>
               </div>
             </div>
