@@ -1,4 +1,3 @@
-
 import { Info } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
@@ -222,6 +221,18 @@ export function AttractionInsights() {
                 </Pie>
               </PieChart>
             </ResponsiveContainer>
+          </div>
+          
+          <div className="flex flex-wrap gap-2 mt-2">
+            {reservationData.map((item) => (
+              <div key={item.name} className="flex items-center gap-1">
+                <div 
+                  className="w-2 h-2 border border-black" 
+                  style={{ backgroundColor: item.color }}
+                ></div>
+                <span className="text-xs text-gray-600">{item.name}</span>
+              </div>
+            ))}
           </div>
         </div>
 
