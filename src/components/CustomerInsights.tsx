@@ -52,9 +52,9 @@ export function CustomerInsights() {
             
             <h3 className="text-sm font-bold text-black mb-4">Top 5 Source Markets</h3>
             
-            <div className="space-y-1">
+            <div className="space-y-0.5">
               {sourceMarkets.map((market) => (
-                <div key={market.rank} className="flex items-center gap-3 py-1 border-b border-gray-200 last:border-b-0">
+                <div key={market.rank} className="flex items-center gap-3 py-0.5 border-b border-gray-200 last:border-b-0">
                   <div className="w-6 h-6 border border-black rounded-full flex items-center justify-center text-xs font-mono">
                     {market.rank}
                   </div>
