@@ -101,15 +101,15 @@ export function TripInsights() {
             <div className="flex flex-col space-y-3 w-1/4">
               <div className="flex items-center">
                 <span className="text-xs text-gray-700">Tower of London</span>
-                <div className="ml-2 w-16 h-px bg-gray-400"></div>
+                <div className="ml-2 flex-1 h-px bg-gray-400"></div>
               </div>
               <div className="flex items-center">
                 <span className="text-xs text-gray-700">Hop-on Hop-off Bus</span>
-                <div className="ml-2 w-16 h-px bg-gray-400"></div>
+                <div className="ml-2 flex-1 h-px bg-gray-400"></div>
               </div>
               <div className="flex items-center">
                 <span className="text-xs text-gray-700">Tower Bridge</span>
-                <div className="ml-2 w-16 h-px bg-gray-400"></div>
+                <div className="ml-2 flex-1 h-px bg-gray-400"></div>
               </div>
             </div>
             
@@ -126,15 +126,15 @@ export function TripInsights() {
             {/* Right side attractions */}
             <div className="flex flex-col space-y-3 w-1/4">
               <div className="flex items-center justify-end">
-                <div className="mr-2 w-16 h-px bg-gray-400"></div>
+                <div className="mr-2 flex-1 h-px bg-gray-400"></div>
                 <span className="text-xs text-gray-700">London Zoo</span>
               </div>
               <div className="flex items-center justify-end">
-                <div className="mr-2 w-16 h-px bg-gray-400"></div>
+                <div className="mr-2 flex-1 h-px bg-gray-400"></div>
                 <span className="text-xs text-gray-700">St Paul's Cathedral</span>
               </div>
               <div className="flex items-center justify-end">
-                <div className="mr-2 w-16 h-px bg-gray-400"></div>
+                <div className="mr-2 flex-1 h-px bg-gray-400"></div>
                 <span className="text-xs text-gray-700">Cutty Sark</span>
               </div>
             </div>
