@@ -19,17 +19,17 @@ interface DashboardSidebarProps {
 const menuItems = [
   {
     id: "customer",
-    title: "Customer Insights",
+    title: "Customer insights",
     icon: Users,
   },
   {
     id: "trip",
-    title: "Trip Insights", 
+    title: "Trip insights", 
     icon: MapPin,
   },
   {
     id: "attraction",
-    title: "Attraction Insights",
+    title: "Attraction insights",
     icon: Star,
   },
 ];
@@ -39,27 +39,23 @@ export function DashboardSidebar({ activeTab, setActiveTab }: DashboardSidebarPr
     <Sidebar className="w-64 border-r-2 border-black/20 bg-white">
       <SidebarContent className="pt-6">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-xs font-mono text-gray-500 mb-4 px-4">
-            ANALYTICS SECTIONS
-          </SidebarGroupLabel>
-          
           <SidebarGroupContent>
-            <SidebarMenu className="space-y-2">
+            <SidebarMenu className="space-y-4 px-4">
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.id}>
                   <SidebarMenuButton
                     onClick={() => setActiveTab(item.id)}
                     className={`
-                      h-12 px-4 w-full justify-start font-medium
-                      border-l-4 transition-all duration-200
+                      h-16 px-6 w-full justify-start font-medium text-base rounded-full
+                      border-2 transition-all duration-200
                       ${activeTab === item.id 
-                        ? 'border-l-black bg-gray-100 text-black' 
-                        : 'border-l-transparent hover:border-l-gray-300 hover:bg-gray-50 text-gray-700'
+                        ? 'bg-slate-700 text-white border-slate-700' 
+                        : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }
                     `}
                   >
-                    <item.icon className="w-5 h-5 mr-3" strokeWidth={1.5} />
-                    <span className="text-sm">{item.title}</span>
+                    <item.icon className="w-6 h-6 mr-4" strokeWidth={1.5} />
+                    <span>{item.title}</span>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
