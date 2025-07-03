@@ -25,7 +25,7 @@ const Index = () => {
 
   return (
     <div 
-      className="min-h-screen bg-cover bg-center bg-no-repeat"
+      className="min-h-screen bg-cover bg-center bg-no-repeat bg-fixed"
       style={{
         backgroundImage: "url('/lovable-uploads/d7c642aa-2150-4a1b-a8ae-583057949ad5.png')"
       }}
@@ -36,7 +36,7 @@ const Index = () => {
         <SidebarInset>
           <DashboardHeader />
           
-          <main className="flex-1 p-6 bg-gray-50/30 backdrop-blur-sm">
+          <main className="flex-1 p-6 bg-gray-50/20 backdrop-blur-none">
             {renderActiveTab()}
           </main>
         </SidebarInset>
