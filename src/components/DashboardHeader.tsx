@@ -1,3 +1,4 @@
+
 import { Building2 } from "lucide-react";
 
 export function DashboardHeader() {
@@ -9,7 +10,7 @@ export function DashboardHeader() {
             Hey Luke
           </h1>
           <p className="text-xl text-gray-600 font-sans mt-1">
-            Join us to unlock insights for your attraction in London
+            Welcome to your personalised Footfall dashboard for The Shard, London
           </p>
         </div>
       </div>
