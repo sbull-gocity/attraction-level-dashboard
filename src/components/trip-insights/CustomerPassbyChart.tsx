@@ -4,7 +4,7 @@ import { Info } from "lucide-react";
 
 export function CustomerPassbyChart() {
   return (
-    <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-96 hover:shadow-xl transition-shadow duration-300">
       <div className="flex items-center gap-3 mb-12">
         <h3 className="text-xl font-bold text-slate-900">How many Go City customers walk past The Shard?</h3>
         <Tooltip>
