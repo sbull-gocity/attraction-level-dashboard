@@ -52,11 +52,11 @@ export function DashboardSidebar({ activeTab, setActiveTab }: DashboardSidebarPr
                     className={`
                       h-16 px-6 w-full justify-start font-medium text-base rounded-full
                       border-2 transition-all duration-200
-                      ${activeTab === item.id 
-                        ? item.id === 'ask' 
-                          ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-transparent' 
-                          : 'bg-[#1e293b] text-white border-[#1e293b]'
-                        : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+                      ${item.id === 'ask' 
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-transparent' 
+                        : activeTab === item.id 
+                          ? 'bg-[#1e293b] text-white border-[#1e293b]'
+                          : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }
                     `}
                   >
