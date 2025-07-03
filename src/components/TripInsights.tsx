@@ -24,8 +24,12 @@ export function TripInsights() {
           <AttractionsCountChart />
           <AttractionFlowChart />
           <CustomerPassbyChart />
-          <NearestAttractionsChart />
-          <PopularCategoriesChart />
+          <div className="h-96">
+            <NearestAttractionsChart />
+          </div>
+          <div className="h-96">
+            <PopularCategoriesChart />
+          </div>
           <TopItinerariesChart />
         </div>
       </div>
