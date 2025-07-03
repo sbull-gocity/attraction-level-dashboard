@@ -1,4 +1,3 @@
-
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis } from "recharts";
 import { Info, ArrowUp } from "lucide-react";
@@ -39,7 +38,6 @@ export function CustomerInsights() {
       <div className="space-y-8">
         <div className="flex items-center justify-between">
           <h2 className="text-3xl font-bold text-slate-900">Customer Insights</h2>
-          <div className="text-xs text-teal-600 font-bold tracking-wider uppercase">SECTION 01</div>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
