@@ -5,7 +5,6 @@ import {
   SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
@@ -36,7 +35,7 @@ const menuItems = [
 
 export function DashboardSidebar({ activeTab, setActiveTab }: DashboardSidebarProps) {
   return (
-    <Sidebar className="w-80 border-r-2 border-black/20 bg-white relative">
+    <Sidebar className="w-80 border-r-2 border-black/20 bg-white">
       <SidebarContent className="pt-6">
         <SidebarGroup>
           <SidebarGroupContent>

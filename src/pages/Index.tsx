@@ -1,10 +1,11 @@
 
 import { useState } from "react";
-import { TopNavigation } from "@/components/TopNavigation";
 import { DashboardHeader } from "@/components/DashboardHeader";
+import { DashboardSidebar } from "@/components/DashboardSidebar";
 import { CustomerInsights } from "@/components/CustomerInsights";
 import { TripInsights } from "@/components/TripInsights";
 import { AttractionInsights } from "@/components/AttractionInsights";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("customer");
@@ -23,14 +24,19 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col w-full bg-white">
-      <DashboardHeader />
-      <TopNavigation activeTab={activeTab} setActiveTab={setActiveTab} />
-      
-      <main className="flex-1 p-6 bg-gray-50/30">
-        {renderActiveTab()}
-      </main>
-    </div>
+    <SidebarProvider>
+      <div className="min-h-screen flex w-full bg-white">
+        <DashboardSidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+        
+        <div className="flex-1 flex flex-col">
+          <DashboardHeader />
+          
+          <main className="flex-1 p-6 bg-gray-50/30">
+            {renderActiveTab()}
+          </main>
+        </div>
+      </div>
+    </SidebarProvider>
   );
 };
 
