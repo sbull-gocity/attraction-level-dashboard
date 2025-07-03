@@ -1,3 +1,4 @@
+
 import { Info } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
@@ -156,7 +157,7 @@ export function AttractionInsights() {
         </div>
 
         {/* Go City visitors to The Shard with an advance reservation */}
-        <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-96 hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-[500px] hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-8">
             <h3 className="text-xl font-bold text-slate-900">Go City visitors to The Shard with an advance reservation</h3>
           </div>
@@ -167,7 +168,7 @@ export function AttractionInsights() {
         </div>
 
         {/* When are Go City customers making their reservations for The Shard? */}
-        <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-96 hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-[500px] hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-8">
             <h3 className="text-xl font-bold text-slate-900">When are Go City customers making their reservations for The Shard?</h3>
           </div>
@@ -206,7 +207,7 @@ export function AttractionInsights() {
         </div>
 
         {/* When are Go City customers visiting The Shard? */}
-        <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-96 hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-[500px] hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center gap-3 mb-8">
             <h3 className="text-xl font-bold text-slate-900">When are Go City customers visiting The Shard?</h3>
           </div>
