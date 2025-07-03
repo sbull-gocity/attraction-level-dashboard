@@ -27,7 +27,7 @@ const Index = () => {
     <div 
       className="min-h-screen bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "url('/lovable-uploads/525e1fef-e56b-4212-aa94-2e992d07a695.png')"
+        backgroundImage: "url('/lovable-uploads/d7c642aa-2150-4a1b-a8ae-583057949ad5.png')"
       }}
     >
       <SidebarProvider>
