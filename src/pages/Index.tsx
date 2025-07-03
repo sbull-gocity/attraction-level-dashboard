@@ -25,17 +25,15 @@ const Index = () => {
 
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full">
-        <DashboardSidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+      <DashboardSidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+      
+      <SidebarInset>
+        <DashboardHeader />
         
-        <SidebarInset className="flex-1">
-          <DashboardHeader />
-          
-          <main className="flex-1 p-6 bg-gray-50/30">
-            {renderActiveTab()}
-          </main>
-        </SidebarInset>
-      </div>
+        <main className="flex-1 p-6 bg-gray-50/30">
+          {renderActiveTab()}
+        </main>
+      </SidebarInset>
     </SidebarProvider>
   );
 };
