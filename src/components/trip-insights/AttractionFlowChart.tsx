@@ -1,5 +1,4 @@
 
-
 export function AttractionFlowChart() {
   return (
     <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 col-span-full hover:shadow-xl transition-shadow duration-300">
@@ -22,11 +21,15 @@ export function AttractionFlowChart() {
           </div>
         </div>
         
-        {/* Center - The Shard with box */}
+        {/* Center - The Shard with image */}
         <div className="flex flex-col items-center flex-1 mx-6">
           <div className="border-2 border-stone-200 rounded-2xl p-6 w-full max-w-40 shadow-md" style={{ backgroundColor: '#F5F4F0' }}>
-            <div className="w-full h-16 bg-stone-100 border border-stone-300 rounded-lg mb-3 flex items-center justify-center">
-              <span className="text-sm text-stone-600 font-semibold">IMG</span>
+            <div className="w-full h-16 border border-stone-300 rounded-lg mb-3 overflow-hidden">
+              <img 
+                src="/lovable-uploads/4c13f1f4-bdc6-4255-8e4f-a8017c9b52a8.png" 
+                alt="The Shard London" 
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="text-center">
               <span className="text-xl font-bold text-slate-900">The Shard</span>
@@ -53,4 +56,3 @@ export function AttractionFlowChart() {
     </div>
   );
 }
-
