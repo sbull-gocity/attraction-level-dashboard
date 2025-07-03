@@ -1,4 +1,5 @@
 
+
 export function NearestAttractionsChart() {
   const attractions = [
     { name: "1. London Bridge Experience", distance: "(0.2 miles)" },
@@ -12,14 +13,15 @@ export function NearestAttractionsChart() {
     <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-[450px] hover:shadow-xl transition-shadow duration-300">
       <h3 className="text-xl font-bold text-slate-900 mb-12">Nearest Go City attractions</h3>
       
-      <div className="space-y-6">
+      <div className="space-y-3">
         {attractions.map((attraction, index) => (
           <div key={index} className="flex items-center justify-between py-1">
             <span className="text-base text-slate-800 font-semibold">{attraction.name}</span>
-            <span className="text-sm text-teal-600 font-semibold">{attraction.distance}</span>
+            <span className="text-sm text-teal-600 font-semibold text-right">{attraction.distance}</span>
           </div>
         ))}
       </div>
     </div>
   );
 }
+
