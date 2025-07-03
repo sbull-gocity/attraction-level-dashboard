@@ -5,7 +5,7 @@ import { DashboardSidebar } from "@/components/DashboardSidebar";
 import { CustomerInsights } from "@/components/CustomerInsights";
 import { TripInsights } from "@/components/TripInsights";
 import { AttractionInsights } from "@/components/AttractionInsights";
-import { SidebarProvider } from "@/components/ui/sidebar";
+import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("customer");
@@ -28,13 +28,13 @@ const Index = () => {
       <div className="min-h-screen flex w-full bg-white">
         <DashboardSidebar activeTab={activeTab} setActiveTab={setActiveTab} />
         
-        <div className="flex-1 flex flex-col">
+        <SidebarInset className="flex-1">
           <DashboardHeader />
           
           <main className="flex-1 p-6 bg-gray-50/30">
             {renderActiveTab()}
           </main>
-        </div>
+        </SidebarInset>
       </div>
     </SidebarProvider>
   );
