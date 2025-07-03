@@ -43,16 +43,16 @@ export function CustomerInsights() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Top 5 Source Markets */}
-          <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-slate-900 mb-8">Top 5 Source Markets</h3>
+          <div className="bg-white rounded-2xl border-0 shadow-lg p-4 h-80 hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-xl font-bold text-slate-900 mb-4">Top 5 Source Markets</h3>
             
-            <div className="space-y-5">
+            <div className="space-y-3">
               {sourceMarkets.map((market) => (
-                <div key={market.rank} className="flex items-center gap-6 py-2">
-                  <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-sm font-bold text-white shadow-md">
+                <div key={market.rank} className="flex items-center gap-4 py-1">
+                  <div className="w-8 h-8 bg-teal-500 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md">
                     {market.rank}
                   </div>
-                  <span className="text-lg font-semibold text-slate-800">{market.country}</span>
+                  <span className="text-base font-semibold text-slate-800">{market.country}</span>
                 </div>
               ))}
             </div>
