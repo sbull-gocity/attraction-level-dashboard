@@ -1,3 +1,4 @@
+
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis } from "recharts";
 import { Info, ArrowUp } from "lucide-react";
@@ -167,7 +168,7 @@ export function CustomerInsights() {
             <h3 className="text-xl font-bold text-slate-900 mb-12">On average, Go City customers who visit the Shard open the Go City app</h3>
             
             <div className="flex items-center justify-center h-40">
-              <span className="text-7xl font-bold text-teal-600">5 times per day</span>
+              <span className="text-5xl font-bold text-teal-600">5 times per day</span>
             </div>
           </div>
         </div>
