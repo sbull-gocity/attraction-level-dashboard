@@ -9,7 +9,7 @@ export function PopularCategoriesChart() {
   ];
 
   return (
-    <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-96 hover:shadow-xl transition-shadow duration-300">
       <h3 className="text-xl font-bold text-slate-900 mb-12">Most popular categories for customers who visit The Shard</h3>
       
       <div className="space-y-8">
