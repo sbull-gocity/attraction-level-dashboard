@@ -1,4 +1,3 @@
-
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis } from "recharts";
 import { Info, ArrowUp } from "lucide-react";
@@ -13,10 +12,10 @@ const sourceMarkets = [
 ];
 
 const partySizeData = [
-  { name: "Solos", value: 25, fill: "#5f9ea0" },
-  { name: "Couples", value: 45, fill: "#4682b4" },
-  { name: "Families", value: 20, fill: "#6495ed" },
-  { name: "Groups", value: 10, fill: "#87ceeb" }
+  { name: "Solos", value: 25, fill: "#4FD1C7" },
+  { name: "Couples", value: 45, fill: "#38B2AC" },
+  { name: "Families", value: 20, fill: "#2C7A7B" },
+  { name: "Groups", value: 10, fill: "#234E52" }
 ];
 
 const purchaseToUsageData = [

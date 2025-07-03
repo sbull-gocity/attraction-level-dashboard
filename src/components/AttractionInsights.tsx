@@ -1,4 +1,3 @@
-
 import { Info } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
@@ -12,11 +11,11 @@ const ratingsData = [
 ];
 
 const reservationData = [
-  { name: 'On the day', value: 25, color: '#4682b4' },
-  { name: '2-3 days before', value: 35, color: '#5f9ea0' },
-  { name: '4-7 days before', value: 20, color: '#6495ed' },
-  { name: '7-14 days before', value: 15, color: '#87ceeb' },
-  { name: 'More than 14 days before', value: 5, color: '#b0e0e6' },
+  { name: 'On the day', value: 25, color: '#4FD1C7' },
+  { name: '2-3 days before', value: 35, color: '#38B2AC' },
+  { name: '4-7 days before', value: 20, color: '#2C7A7B' },
+  { name: '7-14 days before', value: 15, color: '#234E52' },
+  { name: 'More than 14 days before', value: 5, color: '#1A202C' },
 ];
 
 const visitTimeData = [
