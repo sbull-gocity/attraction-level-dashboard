@@ -1,4 +1,5 @@
 
+
 export function AttractionFlowChart() {
   return (
     <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 col-span-full hover:shadow-xl transition-shadow duration-300">
@@ -9,15 +10,15 @@ export function AttractionFlowChart() {
         <div className="flex flex-col space-y-4 w-1/4">
           <div className="flex items-center">
             <span className="text-base text-slate-800 font-semibold">Tower of London</span>
-            <div className="ml-3 flex-1 h-0.5 bg-teal-300"></div>
+            <div className="ml-3 flex-1 h-0.5 bg-teal-500"></div>
           </div>
           <div className="flex items-center">
             <span className="text-base text-slate-800 font-semibold">Hop-on Hop-off Bus</span>
-            <div className="ml-3 flex-1 h-0.5 bg-teal-300"></div>
+            <div className="ml-3 flex-1 h-0.5 bg-teal-500"></div>
           </div>
           <div className="flex items-center">
             <span className="text-base text-slate-800 font-semibold">Tower Bridge</span>
-            <div className="ml-3 flex-1 h-0.5 bg-teal-300"></div>
+            <div className="ml-3 flex-1 h-0.5 bg-teal-500"></div>
           </div>
         </div>
         
@@ -36,15 +37,15 @@ export function AttractionFlowChart() {
         {/* Right side attractions */}
         <div className="flex flex-col space-y-4 w-1/4">
           <div className="flex items-center justify-end">
-            <div className="mr-3 flex-1 h-0.5 bg-teal-300"></div>
+            <div className="mr-3 flex-1 h-0.5 bg-teal-500"></div>
             <span className="text-base text-slate-800 font-semibold">London Zoo</span>
           </div>
           <div className="flex items-center justify-end">
-            <div className="mr-3 flex-1 h-0.5 bg-teal-300"></div>
+            <div className="mr-3 flex-1 h-0.5 bg-teal-500"></div>
             <span className="text-base text-slate-800 font-semibold">St Paul's Cathedral</span>
           </div>
           <div className="flex items-center justify-end">
-            <div className="mr-3 flex-1 h-0.5 bg-teal-300"></div>
+            <div className="mr-3 flex-1 h-0.5 bg-teal-500"></div>
             <span className="text-base text-slate-800 font-semibold">Cutty Sark</span>
           </div>
         </div>
@@ -52,3 +53,4 @@ export function AttractionFlowChart() {
     </div>
   );
 }
+
