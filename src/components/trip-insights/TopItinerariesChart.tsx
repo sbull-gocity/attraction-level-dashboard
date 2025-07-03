@@ -70,9 +70,9 @@ export function TopItinerariesChart() {
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {itineraries.map((itinerary, index) => (
-          <div key={index} className="border-2 border-teal-200 rounded-2xl p-8 bg-teal-50 shadow-md">
+          <div key={index} className="border-2 border-orange-200 rounded-2xl p-8 bg-orange-50 shadow-md">
             <div className="flex items-center gap-4 mb-6">
-              <Clock className="h-6 w-6 text-teal-600" />
+              <Clock className="h-6 w-6 text-orange-600" />
               <span className="font-bold text-slate-900 text-xl">{itinerary.title}</span>
             </div>
             <div className="space-y-4 text-base">
