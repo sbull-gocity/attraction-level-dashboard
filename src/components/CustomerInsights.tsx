@@ -1,3 +1,4 @@
+
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis } from "recharts";
 import { Info, ArrowUp } from "lucide-react";
@@ -60,7 +61,7 @@ export function CustomerInsights() {
 
           {/* Party Size Pie Chart */}
           <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-slate-900 mb-6">Party Size for Customers Visiting The Shard</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-6">Party Size</h3>
             
             <ChartContainer config={chartConfig} className="h-40">
               <PieChart>
