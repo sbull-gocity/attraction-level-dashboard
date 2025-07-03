@@ -1,5 +1,5 @@
 
-import { Users, MapPin, Star } from "lucide-react";
+import { Users, MapPin, Star, MessageCircle } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -31,6 +31,11 @@ const menuItems = [
     title: "Attraction insights",
     icon: Star,
   },
+  {
+    id: "ask",
+    title: "Ask us anything",
+    icon: MessageCircle,
+  },
 ];
 
 export function DashboardSidebar({ activeTab, setActiveTab }: DashboardSidebarProps) {
@@ -48,7 +53,9 @@ export function DashboardSidebar({ activeTab, setActiveTab }: DashboardSidebarPr
                       h-16 px-6 w-full justify-start font-medium text-base rounded-full
                       border-2 transition-all duration-200
                       ${activeTab === item.id 
-                        ? 'bg-[#1e293b] text-white border-[#1e293b]' 
+                        ? item.id === 'ask' 
+                          ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white border-transparent' 
+                          : 'bg-[#1e293b] text-white border-[#1e293b]'
                         : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }
                     `}

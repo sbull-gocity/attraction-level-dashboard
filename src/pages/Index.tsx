@@ -5,6 +5,7 @@ import { DashboardSidebar } from "@/components/DashboardSidebar";
 import { CustomerInsights } from "@/components/CustomerInsights";
 import { TripInsights } from "@/components/TripInsights";
 import { AttractionInsights } from "@/components/AttractionInsights";
+import { AskUsAnything } from "@/components/AskUsAnything";
 import { SidebarProvider, SidebarInset } from "@/components/ui/sidebar";
 
 const Index = () => {
@@ -18,6 +19,8 @@ const Index = () => {
         return <TripInsights />;
       case "attraction":
         return <AttractionInsights />;
+      case "ask":
+        return <AskUsAnything />;
       default:
         return <CustomerInsights />;
     }
