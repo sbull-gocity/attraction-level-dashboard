@@ -1,4 +1,3 @@
-
 import { Clock } from "lucide-react";
 
 interface Itinerary {
@@ -72,7 +71,7 @@ export function TopItinerariesChart() {
         {itineraries.map((itinerary, index) => (
           <div key={index} className="border-2 border-orange-200 rounded-2xl p-8 bg-orange-50 shadow-md">
             <div className="flex items-center gap-4 mb-6">
-              <Clock className="h-6 w-6 text-orange-600" />
+              <Clock className="h-6 w-6 text-primary" />
               <span className="font-bold text-slate-900 text-xl">{itinerary.title}</span>
             </div>
             <div className="space-y-4 text-base">
