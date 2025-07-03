@@ -9,8 +9,8 @@ export function DashboardHeader() {
           <h1 className="text-5xl font-black text-black tracking-wide font-sans">
             Hey Luke
           </h1>
-          <p className="text-xl text-gray-600 font-sans mt-1">
-            Join us to unlock insights for your attraction in London
+          <p className="text-2xl text-gray-600 font-sans mt-1">
+            Welcome to your personalised FootFall dashboard for The Shard
           </p>
         </div>
       </div>
