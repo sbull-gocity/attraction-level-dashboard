@@ -1,5 +1,3 @@
-
-
 import { Info } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
@@ -100,7 +98,7 @@ export function AttractionInsights() {
           </div>
         </div>
 
-        {/* Chart 3 - Average Dwell Time at The Shard */}
+        {/* Chart 3 - Most popular time to visit The Shard */}
         <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64">
           <div className="flex items-center justify-between mb-4">
             <div className="w-4 h-4 border border-black rounded-full"></div>
@@ -108,19 +106,19 @@ export function AttractionInsights() {
           </div>
           
           <div className="flex items-center gap-2 mb-4">
-            <h3 className="text-sm font-medium text-black">Average dwell time at The Shard</h3>
+            <h3 className="text-sm font-medium text-black">Most popular time to visit The Shard</h3>
             <HoverCard>
               <HoverCardTrigger asChild>
                 <Info className="w-4 h-4 text-gray-400 cursor-help" />
               </HoverCardTrigger>
               <HoverCardContent className="w-64">
-                <p className="text-sm">Dwell time based on anonymous geolocation data from Go City app</p>
+                <p className="text-sm">Based on visitor traffic data from Go City app</p>
               </HoverCardContent>
             </HoverCard>
           </div>
           
           <div className="flex flex-col items-center justify-center h-32">
-            <div className="text-6xl font-bold text-black">98 minutes</div>
+            <div className="text-6xl font-bold text-black">Saturday 4-6pm</div>
           </div>
         </div>
 
@@ -282,4 +280,3 @@ export function AttractionInsights() {
     </div>
   );
 }
-
