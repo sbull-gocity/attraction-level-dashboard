@@ -11,10 +11,10 @@ export function DashboardHeader() {
         
         <div>
           <h1 className="text-2xl font-bold text-black tracking-wide">
-            THE SHARD
+            Hey Luke
           </h1>
-          <p className="text-sm text-gray-600 font-mono">
-            Performance Dashboard
+          <p className="text-base text-gray-600 font-mono">
+            Here are your personalised insights for The Shard
           </p>
         </div>
       </div>
