@@ -1,39 +1,34 @@
 
 export function AttractionFlowChart() {
   return (
-    <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-64 col-span-full">
-      <div className="flex items-center justify-between mb-4">
-        <div className="w-4 h-4 border border-black rounded-full"></div>
-        <span className="text-xs font-mono text-gray-400">CHART 4</span>
-      </div>
-      
-      <h3 className="text-sm font-bold text-black mb-6">What attractions are customers visiting before and after The Shard?</h3>
+    <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 h-64 col-span-full">
+      <h3 className="text-lg font-semibold text-slate-800 mb-8">What attractions are customers visiting before and after The Shard?</h3>
       
       <div className="flex items-center justify-between h-32">
         {/* Left side attractions */}
         <div className="flex flex-col space-y-3 w-1/4">
           <div className="flex items-center">
-            <span className="text-xs text-gray-700">Tower of London</span>
-            <div className="ml-2 flex-1 h-px bg-gray-400"></div>
+            <span className="text-sm text-slate-700 font-medium">Tower of London</span>
+            <div className="ml-2 flex-1 h-px bg-slate-300"></div>
           </div>
           <div className="flex items-center">
-            <span className="text-xs text-gray-700">Hop-on Hop-off Bus</span>
-            <div className="ml-2 flex-1 h-px bg-gray-400"></div>
+            <span className="text-sm text-slate-700 font-medium">Hop-on Hop-off Bus</span>
+            <div className="ml-2 flex-1 h-px bg-slate-300"></div>
           </div>
           <div className="flex items-center">
-            <span className="text-xs text-gray-700">Tower Bridge</span>
-            <div className="ml-2 flex-1 h-px bg-gray-400"></div>
+            <span className="text-sm text-slate-700 font-medium">Tower Bridge</span>
+            <div className="ml-2 flex-1 h-px bg-slate-300"></div>
           </div>
         </div>
         
         {/* Center - The Shard with box */}
         <div className="flex flex-col items-center flex-1 mx-4">
-          <div className="border-2 border-gray-400 rounded-lg p-4 bg-gray-50 w-full max-w-32">
-            <div className="w-full h-12 bg-gray-200 border border-gray-300 rounded mb-2 flex items-center justify-center">
-              <span className="text-xs text-gray-500">IMG</span>
+          <div className="border-2 border-slate-200 rounded-xl p-4 bg-slate-50 w-full max-w-32">
+            <div className="w-full h-12 bg-slate-200 border border-slate-300 rounded-lg mb-2 flex items-center justify-center">
+              <span className="text-xs text-slate-500 font-medium">IMG</span>
             </div>
             <div className="text-center">
-              <span className="text-lg font-bold text-black">The Shard</span>
+              <span className="text-lg font-bold text-slate-800">The Shard</span>
             </div>
           </div>
         </div>
@@ -41,16 +36,16 @@ export function AttractionFlowChart() {
         {/* Right side attractions */}
         <div className="flex flex-col space-y-3 w-1/4">
           <div className="flex items-center justify-end">
-            <div className="mr-2 flex-1 h-px bg-gray-400"></div>
-            <span className="text-xs text-gray-700">London Zoo</span>
+            <div className="mr-2 flex-1 h-px bg-slate-300"></div>
+            <span className="text-sm text-slate-700 font-medium">London Zoo</span>
           </div>
           <div className="flex items-center justify-end">
-            <div className="mr-2 flex-1 h-px bg-gray-400"></div>
-            <span className="text-xs text-gray-700">St Paul's Cathedral</span>
+            <div className="mr-2 flex-1 h-px bg-slate-300"></div>
+            <span className="text-sm text-slate-700 font-medium">St Paul's Cathedral</span>
           </div>
           <div className="flex items-center justify-end">
-            <div className="mr-2 flex-1 h-px bg-gray-400"></div>
-            <span className="text-xs text-gray-700">Cutty Sark</span>
+            <div className="mr-2 flex-1 h-px bg-slate-300"></div>
+            <span className="text-sm text-slate-700 font-medium">Cutty Sark</span>
           </div>
         </div>
       </div>

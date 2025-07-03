@@ -9,19 +9,14 @@ export function NearestAttractionsChart() {
   ];
 
   return (
-    <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-6 h-80">
-      <div className="flex items-center justify-between mb-4">
-        <div className="w-4 h-4 border border-black rounded-full"></div>
-        <span className="text-xs font-mono text-gray-400">CHART 6</span>
-      </div>
+    <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 h-80">
+      <h3 className="text-lg font-semibold text-slate-800 mb-8">Nearest Go City attractions</h3>
       
-      <h3 className="text-sm font-bold text-black mb-6">Nearest Go City attractions</h3>
-      
-      <div className="space-y-3">
+      <div className="space-y-4">
         {attractions.map((attraction, index) => (
           <div key={index} className="flex items-center justify-between">
-            <span className="text-sm text-gray-800">{attraction.name}</span>
-            <span className="text-xs text-gray-500">{attraction.distance}</span>
+            <span className="text-sm text-slate-700 font-medium">{attraction.name}</span>
+            <span className="text-xs text-slate-500 font-medium">{attraction.distance}</span>
           </div>
         ))}
       </div>
