@@ -13,10 +13,10 @@ const sourceMarkets = [
 ];
 
 const partySizeData = [
-  { name: "Solos", value: 25, fill: "#000000" },
-  { name: "Couples", value: 45, fill: "#404040" },
-  { name: "Families", value: 20, fill: "#808080" },
-  { name: "Groups", value: 10, fill: "#c0c0c0" }
+  { name: "Solos", value: 25, fill: "#5f9ea0" },
+  { name: "Couples", value: 45, fill: "#4682b4" },
+  { name: "Families", value: 20, fill: "#6495ed" },
+  { name: "Groups", value: 10, fill: "#87ceeb" }
 ];
 
 const purchaseToUsageData = [
@@ -38,41 +38,41 @@ export function CustomerInsights() {
     <TooltipProvider>
       <div className="space-y-8">
         <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-slate-800">Customer Insights</h2>
-          <div className="text-sm text-slate-500 font-medium">SECTION 01</div>
+          <h2 className="text-3xl font-bold text-slate-900">Customer Insights</h2>
+          <div className="text-xs text-teal-600 font-bold tracking-wider uppercase">SECTION 01</div>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Top 5 Source Markets */}
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 h-64">
-            <h3 className="text-lg font-semibold text-slate-800 mb-6">Top 5 Source Markets</h3>
+          <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-xl font-bold text-slate-900 mb-8">Top 5 Source Markets</h3>
             
-            <div className="space-y-3">
+            <div className="space-y-5">
               {sourceMarkets.map((market) => (
-                <div key={market.rank} className="flex items-center gap-4 py-1">
-                  <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center text-sm font-semibold text-slate-700">
+                <div key={market.rank} className="flex items-center gap-6 py-2">
+                  <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-sm font-bold text-white shadow-md">
                     {market.rank}
                   </div>
-                  <span className="text-base font-medium text-slate-700">{market.country}</span>
+                  <span className="text-lg font-semibold text-slate-800">{market.country}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Party Size Pie Chart */}
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 h-64">
-            <h3 className="text-lg font-semibold text-slate-800 mb-4">Party Size</h3>
+          <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-xl font-bold text-slate-900 mb-6">Party Size</h3>
             
-            <ChartContainer config={chartConfig} className="h-32">
+            <ChartContainer config={chartConfig} className="h-40">
               <PieChart>
                 <Pie
                   data={partySizeData}
                   cx="50%"
                   cy="50%"
-                  outerRadius={50}
+                  outerRadius={60}
                   dataKey="value"
-                  stroke="#000000"
-                  strokeWidth={1}
+                  stroke="#ffffff"
+                  strokeWidth={2}
                 >
                   {partySizeData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.fill} />
@@ -82,65 +82,65 @@ export function CustomerInsights() {
               </PieChart>
             </ChartContainer>
             
-            <div className="flex flex-wrap gap-3 mt-3">
+            <div className="flex flex-wrap gap-4 mt-4">
               {partySizeData.map((item) => (
                 <div key={item.name} className="flex items-center gap-2">
                   <div 
-                    className="w-3 h-3 rounded-sm" 
+                    className="w-4 h-4 rounded-sm shadow-sm" 
                     style={{ backgroundColor: item.fill }}
                   ></div>
-                  <span className="text-sm text-slate-600 font-medium">{item.name}</span>
+                  <span className="text-sm text-slate-700 font-semibold">{item.name}</span>
                 </div>
               ))}
             </div>
           </div>
 
           {/* NPS Chart */}
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 h-64">
-            <div className="flex items-center gap-2 mb-6">
-              <h3 className="text-lg font-semibold text-slate-800">NPS of Customers Visiting The Shard</h3>
+          <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
+            <div className="flex items-center gap-3 mb-8">
+              <h3 className="text-xl font-bold text-slate-900">NPS of Customers Visiting The Shard</h3>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Info className="w-4 h-4 text-slate-400 cursor-help" />
+                  <Info className="w-5 h-5 text-teal-500 cursor-help" />
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p className="text-xs">Net Promoter Score measures customer loyalty and satisfaction on a scale from -100 to 100</p>
+                  <p className="text-sm">Net Promoter Score measures customer loyalty and satisfaction on a scale from -100 to 100</p>
                 </TooltipContent>
               </Tooltip>
             </div>
             
-            <div className="flex items-center justify-center mb-6">
-              <span className="text-6xl font-bold text-slate-800">65</span>
+            <div className="flex items-center justify-center mb-8">
+              <span className="text-7xl font-bold text-teal-600">65</span>
             </div>
             
-            <div className="flex items-center gap-1 text-sm text-slate-600">
+            <div className="flex items-center gap-2 text-sm text-slate-700">
               <span>This is</span>
-              <span className="font-semibold text-slate-800">higher</span>
+              <span className="font-bold text-slate-900">higher</span>
               <span>than the overall NPS for London - 64</span>
-              <ArrowUp className="w-4 h-4 text-green-600" />
+              <ArrowUp className="w-5 h-5 text-teal-500" />
             </div>
           </div>
 
           {/* Pass Purchase to Usage Chart */}
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 h-64">
-            <div className="flex items-center gap-2 mb-4">
-              <h3 className="text-lg font-semibold text-slate-800">Pass Purchase to Usage for Customers Visiting The Shard</h3>
+          <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
+            <div className="flex items-center gap-3 mb-6">
+              <h3 className="text-xl font-bold text-slate-900">Pass Purchase to Usage for Customers Visiting The Shard</h3>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Info className="w-4 h-4 text-slate-400 cursor-help" />
+                  <Info className="w-5 h-5 text-teal-500 cursor-help" />
                 </TooltipTrigger>
                 <TooltipContent>
-                  <p className="text-xs">This tells you how much time has lapsed between a customer buying a pass and using it at The Shard</p>
+                  <p className="text-sm">This tells you how much time has lapsed between a customer buying a pass and using it at The Shard</p>
                 </TooltipContent>
               </Tooltip>
             </div>
             
-            <ChartContainer config={chartConfig} className="h-32">
+            <ChartContainer config={chartConfig} className="h-40">
               <BarChart data={purchaseToUsageData} margin={{ top: 20, right: 20, bottom: 40, left: 20 }}>
                 <XAxis 
                   type="category" 
                   dataKey="timeframe" 
-                  tick={{ fontSize: 8, fill: "#64748b" }}
+                  tick={{ fontSize: 10, fill: "#475569" }}
                   axisLine={false}
                   tickLine={false}
                   angle={-45}
@@ -148,27 +148,27 @@ export function CustomerInsights() {
                   height={40}
                 />
                 <YAxis type="number" hide />
-                <Bar dataKey="value" fill="#64748b" stroke="#334155" strokeWidth={1} />
+                <Bar dataKey="value" fill="#5f9ea0" stroke="#4682b4" strokeWidth={1} radius={[6, 6, 0, 0]} />
                 <ChartTooltip content={<ChartTooltipContent />} />
               </BarChart>
             </ChartContainer>
           </div>
 
-          {/* Chart 5 - A Go City customer last visited The Shard */}
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 h-64">
-            <h3 className="text-lg font-semibold text-slate-800 mb-8">A Go City customer last visited The Shard</h3>
+          {/* A Go City customer last visited The Shard */}
+          <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-xl font-bold text-slate-900 mb-12">A Go City customer last visited The Shard</h3>
             
-            <div className="flex items-center justify-center h-32">
-              <span className="text-4xl font-bold text-slate-800">12 minutes ago</span>
+            <div className="flex items-center justify-center h-40">
+              <span className="text-5xl font-bold text-teal-600">12 minutes ago</span>
             </div>
           </div>
 
-          {/* Chart 6 - Go City app usage */}
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 h-64">
-            <h3 className="text-lg font-semibold text-slate-800 mb-8">On average, Go City customers who visit the Shard open the Go City app</h3>
+          {/* Go City app usage */}
+          <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
+            <h3 className="text-xl font-bold text-slate-900 mb-12">On average, Go City customers who visit the Shard open the Go City app</h3>
             
-            <div className="flex items-center justify-center h-32">
-              <span className="text-6xl font-bold text-slate-800">5 times per day</span>
+            <div className="flex items-center justify-center h-40">
+              <span className="text-7xl font-bold text-teal-600">5 times per day</span>
             </div>
           </div>
         </div>

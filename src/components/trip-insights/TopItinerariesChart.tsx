@@ -65,23 +65,23 @@ export function TopItinerariesChart() {
   ];
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 col-span-full">
-      <h3 className="text-lg font-semibold text-slate-800 mb-8">Top 3 itineraries which include The Shard</h3>
+    <div className="bg-white rounded-2xl border-0 shadow-lg p-8 col-span-full hover:shadow-xl transition-shadow duration-300">
+      <h3 className="text-xl font-bold text-slate-900 mb-12">Top 3 itineraries which include The Shard</h3>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {itineraries.map((itinerary, index) => (
-          <div key={index} className="border border-slate-200 rounded-xl p-6 bg-slate-50">
-            <div className="flex items-center gap-3 mb-4">
-              <Clock className="h-5 w-5 text-slate-600" />
-              <span className="font-semibold text-slate-800 text-lg">{itinerary.title}</span>
+          <div key={index} className="border-2 border-teal-200 rounded-2xl p-8 bg-teal-50 shadow-md">
+            <div className="flex items-center gap-4 mb-6">
+              <Clock className="h-6 w-6 text-teal-600" />
+              <span className="font-bold text-slate-900 text-xl">{itinerary.title}</span>
             </div>
-            <div className="space-y-3 text-sm">
+            <div className="space-y-4 text-base">
               {itinerary.days.map((day, dayIndex) => (
                 <div key={dayIndex}>
-                  <div className="font-semibold text-slate-800 mt-4 first:mt-0">{day.day}</div>
-                  <ul className="text-slate-700 space-y-1 ml-2 mt-1">
+                  <div className="font-bold text-slate-900 mt-6 first:mt-0">{day.day}</div>
+                  <ul className="text-slate-800 space-y-2 ml-3 mt-2">
                     {day.attractions.map((attraction, attractionIndex) => (
-                      <li key={attractionIndex} className="font-medium">• {attraction}</li>
+                      <li key={attractionIndex} className="font-semibold">• {attraction}</li>
                     ))}
                   </ul>
                 </div>

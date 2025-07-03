@@ -9,14 +9,14 @@ export function NearestAttractionsChart() {
   ];
 
   return (
-    <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 h-80">
-      <h3 className="text-lg font-semibold text-slate-800 mb-8">Nearest Go City attractions</h3>
+    <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
+      <h3 className="text-xl font-bold text-slate-900 mb-12">Nearest Go City attractions</h3>
       
-      <div className="space-y-4">
+      <div className="space-y-6">
         {attractions.map((attraction, index) => (
-          <div key={index} className="flex items-center justify-between">
-            <span className="text-sm text-slate-700 font-medium">{attraction.name}</span>
-            <span className="text-xs text-slate-500 font-medium">{attraction.distance}</span>
+          <div key={index} className="flex items-center justify-between py-1">
+            <span className="text-base text-slate-800 font-semibold">{attraction.name}</span>
+            <span className="text-sm text-teal-600 font-semibold">{attraction.distance}</span>
           </div>
         ))}
       </div>

@@ -16,15 +16,15 @@ const chartConfig = {
 
 export function TripLengthChart() {
   return (
-    <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 h-64">
-      <h3 className="text-lg font-semibold text-slate-800 mb-6">Trip Length for Customers who Visit The Shard</h3>
+    <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
+      <h3 className="text-xl font-bold text-slate-900 mb-8">Trip Length for Customers who Visit The Shard</h3>
       
-      <ChartContainer config={chartConfig} className="h-32">
+      <ChartContainer config={chartConfig} className="h-40">
         <BarChart data={tripLengthData} margin={{ top: 20, right: 20, bottom: 40, left: 20 }}>
           <XAxis 
             type="category" 
             dataKey="duration" 
-            tick={{ fontSize: 8, fill: "#64748b" }}
+            tick={{ fontSize: 10, fill: "#475569" }}
             axisLine={false}
             tickLine={false}
             angle={-45}
@@ -32,7 +32,7 @@ export function TripLengthChart() {
             height={40}
           />
           <YAxis type="number" hide />
-          <Bar dataKey="value" fill="#64748b" stroke="#334155" strokeWidth={1} />
+          <Bar dataKey="value" fill="#5f9ea0" stroke="#4682b4" strokeWidth={1} radius={[6, 6, 0, 0]} />
           <ChartTooltip content={<ChartTooltipContent />} />
         </BarChart>
       </ChartContainer>
