@@ -23,9 +23,9 @@ export function AttractionFlowChart() {
         
         {/* Center - The Shard with box */}
         <div className="flex flex-col items-center flex-1 mx-6">
-          <div className="border-2 border-teal-200 rounded-2xl p-6 bg-teal-50 w-full max-w-40 shadow-md">
-            <div className="w-full h-16 bg-teal-100 border border-teal-300 rounded-lg mb-3 flex items-center justify-center">
-              <span className="text-sm text-teal-600 font-semibold">IMG</span>
+          <div className="border-2 border-stone-200 rounded-2xl p-6 w-full max-w-40 shadow-md" style={{ backgroundColor: '#F5F4F0' }}>
+            <div className="w-full h-16 bg-stone-100 border border-stone-300 rounded-lg mb-3 flex items-center justify-center">
+              <span className="text-sm text-stone-600 font-semibold">IMG</span>
             </div>
             <div className="text-center">
               <span className="text-xl font-bold text-slate-900">The Shard</span>
