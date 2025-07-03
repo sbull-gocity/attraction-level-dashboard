@@ -1,3 +1,4 @@
+
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis } from "recharts";
 import { Info, ArrowUp } from "lucide-react";
@@ -59,7 +60,7 @@ export function CustomerInsights() {
 
           {/* Party Size Pie Chart */}
           <div className="bg-white rounded-2xl border-0 shadow-lg p-8 h-80 hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-slate-900 mb-6">Party Size</h3>
+            <h3 className="text-xl font-bold text-slate-900 mb-6">Party Size for Customers Visiting The Shard</h3>
             
             <ChartContainer config={chartConfig} className="h-40">
               <PieChart>
@@ -113,9 +114,9 @@ export function CustomerInsights() {
             
             <div className="flex items-center gap-2 text-sm text-slate-700">
               <span>This is</span>
-              <span className="font-bold text-slate-900">higher</span>
+              <span className="text-2xl font-bold text-teal-600">higher</span>
               <span>than the overall NPS for London - 64</span>
-              <ArrowUp className="w-5 h-5 text-teal-500" />
+              <ArrowUp className="w-10 h-10 text-teal-500" />
             </div>
           </div>
 
