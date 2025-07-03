@@ -1,3 +1,4 @@
+
 import { Info } from "lucide-react";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
@@ -112,7 +113,7 @@ export function AttractionInsights() {
                 <Info className="w-4 h-4 text-gray-400 cursor-help" />
               </HoverCardTrigger>
               <HoverCardContent className="w-64">
-                <p className="text-sm">Based on visitor traffic data from Go City app</p>
+                <p className="text-sm">Most popular 2 hour window for Go City customers to scan their pass at The Shard</p>
               </HoverCardContent>
             </HoverCard>
           </div>
