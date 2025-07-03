@@ -28,7 +28,7 @@ const Index = () => {
       <div className="min-h-screen flex w-full bg-white">
         <DashboardSidebar activeTab={activeTab} setActiveTab={setActiveTab} />
         
-        <SidebarInset className="flex-1">
+        <SidebarInset className="flex-1 flex flex-col">
           <DashboardHeader />
           
           <main className="flex-1 p-6 bg-gray-50/30">
