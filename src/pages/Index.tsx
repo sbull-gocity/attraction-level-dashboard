@@ -24,17 +24,24 @@ const Index = () => {
   };
 
   return (
-    <SidebarProvider>
-      <DashboardSidebar activeTab={activeTab} setActiveTab={setActiveTab} />
-      
-      <SidebarInset>
-        <DashboardHeader />
+    <div 
+      className="min-h-screen bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: "url('/lovable-uploads/525e1fef-e56b-4212-aa94-2e992d07a695.png')"
+      }}
+    >
+      <SidebarProvider>
+        <DashboardSidebar activeTab={activeTab} setActiveTab={setActiveTab} />
         
-        <main className="flex-1 p-6 bg-gray-50/30">
-          {renderActiveTab()}
-        </main>
-      </SidebarInset>
-    </SidebarProvider>
+        <SidebarInset>
+          <DashboardHeader />
+          
+          <main className="flex-1 p-6 bg-gray-50/30 backdrop-blur-sm">
+            {renderActiveTab()}
+          </main>
+        </SidebarInset>
+      </SidebarProvider>
+    </div>
   );
 };
 
